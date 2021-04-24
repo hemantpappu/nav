@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.fixed-bc{
+  position: sticky;
+  top:0;
+}
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+  top: 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header.header-scrolled {
+  top: 0;
+  padding: 15px;
+}
+
+#header .logo {
+  font-size: 32px;
+  margin: -35px;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #222222;
+}
+
+#header .logo a span {
+  color: #106eea;
+}
+
+#header .logo img {
+  max-height: 110px;
+  
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 15px;
+    top: 0;
+  }
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul li a{
+  margin-right: 3rem;
+}
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul {
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #222222;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 3px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #106eea;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #106eea;
+}
+
+.nav-menu .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 26px;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.nav-menu .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav-menu .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.nav-menu .drop-down ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #062b5b;
+}
+
+.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+  color: #106eea;
+}
+
+.nav-menu .drop-down > a:after {
+  content: "\ea99";
+  font-family: IcoFont;
+  padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.nav-menu .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down > a:after {
+  content: "\eaa0";
+  font-family: IcoFont;
+  position: absolute;
+  right: 15px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu .drop-down .drop-down ul {
+    left: -90%;
+  }
+  .nav-menu .drop-down .drop-down:hover > ul {
+    left: -100%;
+  }
+  .nav-menu .drop-down .drop-down > a:after {
+    content: "\ea9d";
+  }
+}
+/* .logo-g img{
+  width: 100px;
+  margin-top: -30px;
+} */
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+
+
+.logo1 img{
+  width: 150px;
+
+}
+.bg-dark1{
+  background-color: #1F1F1F;
+}
+
+/* .background1{
+  width: 100%;
+  height: 100vh;
+  background-image: url('banner1.jpg');
+  background-size: cover;
+}
+.background2{
+  width: 100%;
+  height: 100vh;
+  background-image: url('banner1.jpg');
+  background-size: cover;
+} */
+
+.back-full{
+  background-image: url('back.jpg');
+  background-size: cover;
+  box-sizing: border-box;
+}
+.back-100{
+  height: 100vh;
+}
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  box-sizing: border-box;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, -15px); }
+  100%   { transform: translate(0, 0px); }    
+}
+
+/* send enquiry */
+.clr-br{
+  background-color: #76535F !important;
+}
+/* whatapp */
+#sd-bar-wht {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  z-index: 999;
+}
+
+.sd-bar-wht {
+  background: #0dbf43;
+  border-radius: 2rem;
+  padding: 10px 12px 10px;
+  height: 50px;
+  width: 50px;
+  color: aliceblue;
+}
+.sd-bar-wht i{
+  color: aliceblue;
+  font-size: 20px;
+}
+/* phone */
+#sd-bar-phn {
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+  z-index: 999;
+}
+
+.sd-bar-phn {
+  
+  border-radius: 2rem;
+  padding: 10px 12px 10px;
+  height: 50px;
+  width: 50px;
+  color: whitesmoke;
+}
+.sd-bar-phn i{
+  color: aliceblue;
+  font-size: 20px;
+}
+.sd-bar-phn  a, a:hover, a:focus, a:active {
+  text-decoration: none !important;
+}
+
+
+@media (min-width: 768px) {
+
+  #sd-bar-phn {
+
+    display: none;
+
+  }
+}
+@media (max-width: 768px) {
+
+  #sd-bar-wht {
+   position: fixed;
+   bottom: 1%;
+   right: 1%;
+   z-index: 999;
+ }
+   #sd-bar-phn {
+   position: fixed;
+   bottom: 1%;
+   right: 1%;
+   z-index: 998;
+ }
+ .back-100{
+  height: 900px;
+}
+
+ }
+
+
+ .mar-to{
+  margin-top: -4rem !important ;
+ }
+ .bg-info1{
+   background-color: #17A2B8;
+ }
+
+ /* cards */
+.choose{
+  font-family: 'Orelega One', cursive;
+  
+}
+.choose-clr{
+  color: #C5A37E;
+}
+
+
+.back-cl{
+  background-color: #fefbd8;
+}
+/* choose property */
+/* .co-bg{
+  background: linear-gradient(90deg, red 0% 16.67%, yellow 16.67% 33.33%, lime 33.33% 50%, cyan 50% 66.67%, blue 66.67% 83.33%, magenta 83.33% 100%), conic-gradient(from 180deg, red 0%, yellow 0 16.67%, lime 0 33.33%, cyan 0 50%, blue 0 66.67%, magenta 0 83.33%, red 0 100%);
+background-blend-mode: screen, normal;
+}
+.co-rc{
+  background: linear-gradient(238.72deg, #EBFF00 0%, #8F00FF 100%), linear-gradient(64.82deg, #AD00FF 0%, #FF0000 100%), linear-gradient(65.03deg, #00FFFF 0%, #FF0000 99.79%), radial-gradient(67.08% 100% at 50% 100%, #FF00C7 0%, #50005E 100%), radial-gradient(100% 140% at 100% 0%, #5ED500 0%, #2200AA 100%);
+background-blend-mode: color-dodge, difference, lighten, color-dodge, normal;
+} */
+
